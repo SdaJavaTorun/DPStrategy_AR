@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.czas;
 public class Silka implements WolnyCzas {
     @Override
     public void spedzanieWolnegCzasu() {
-
+        System.out.println("Na siłowni");
     }
 }

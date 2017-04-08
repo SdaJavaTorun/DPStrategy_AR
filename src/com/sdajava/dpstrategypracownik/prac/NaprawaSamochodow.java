@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.prac;
 public class NaprawaSamochodow implements Pracowac {
     @Override
     public void pracuj() {
-        System.out.println("Naprawa");
+        System.out.println("Naprawa fur");
     }
 }

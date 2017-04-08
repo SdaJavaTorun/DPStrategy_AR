@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.dojazd;
 public class Rower implements Dojezdzac {
     @Override
     public void dojezdzaj() {
-
+        System.out.println("Cudowne dziecko dwóch pedałów");
     }
 }

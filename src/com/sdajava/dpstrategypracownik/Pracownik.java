@@ -35,6 +35,13 @@ public class Pracownik {
         this.zawod = zawod;
     }
 
+    public void execute () {
+        pracowac.pracuj();
+        dojezdzac.dojezdzaj();
+        wolnyCzas.spedzanieWolnegCzasu();
+
+    }
+
     public String getPracowac() {
         return pracowac.toString();
     }
@@ -70,10 +77,10 @@ public class Pracownik {
     @Override
     public String toString() {
         return "Pracownik{" +
-                "pracowac=" + pracowac +
-                ", dojezdzac=" + dojezdzac +
-                ", wolnyCzas=" + wolnyCzas +
-                ", zawod='" + zawod + '\'' +
+                "pracowac = " + pracowac +
+                ", dojezdzac = " + dojezdzac +
+                ", wolnyCzas = " + wolnyCzas +
+                ", zawod = '" + zawod + '\'' +
                 '}';
     }
 }

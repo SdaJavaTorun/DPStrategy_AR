@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.czas;
 public class Literatura implements WolnyCzas {
     @Override
     public void spedzanieWolnegCzasu() {
-
+        System.out.println("czyta komiksy");
     }
 }

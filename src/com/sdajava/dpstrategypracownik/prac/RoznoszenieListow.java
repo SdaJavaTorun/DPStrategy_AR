@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.prac;
 public class RoznoszenieListow implements Pracowac {
     @Override
     public void pracuj() {
-
+        System.out.println("roznosi listy");
     }
 }

@@ -6,6 +6,6 @@ package com.sdajava.dpstrategypracownik.dojazd;
 public class Samochow implements Dojezdzac {
     @Override
     public void dojezdzaj() {
-
+        System.out.println("Wozi sie autem");
     }
 }
