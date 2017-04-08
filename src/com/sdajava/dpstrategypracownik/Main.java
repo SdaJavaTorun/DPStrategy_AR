@@ -6,7 +6,7 @@ public class Main {
 
         Pracownik pracownik1 = new Pracownik ("mechanik");
         Pracownik pracownik2 = new Pracownik ("listonosz");
-        Pracownik pracownik3 = new Pracownik ("konował");
+        Pracownik pracownik3 = new Pracownik ("konowal");
 
         pracownik1.execute();
         pracownik2.execute();

@@ -5,7 +5,7 @@ import com.sdajava.dpstrategypracownik.czas.Silka;
 import com.sdajava.dpstrategypracownik.czas.WolnyCzas;
 import com.sdajava.dpstrategypracownik.dojazd.Dojezdzac;
 import com.sdajava.dpstrategypracownik.dojazd.Rower;
-import com.sdajava.dpstrategypracownik.dojazd.Samochow;
+import com.sdajava.dpstrategypracownik.dojazd.Samochod;
 import com.sdajava.dpstrategypracownik.prac.Leczenie;
 import com.sdajava.dpstrategypracownik.prac.NaprawaSamochodow;
 import com.sdajava.dpstrategypracownik.prac.Pracowac;
@@ -20,66 +20,38 @@ public class Pracownik {
     private String zawod;
 
     public Pracownik(String zawod) {
-        if (zawod == "mechanik")
-            this.dojezdzac = new Samochow();
+        if (zawod.equals("mechanik")) {
             this.pracowac = new NaprawaSamochodow();
+            this.dojezdzac = new Samochod();
             this.wolnyCzas = new Silka();
-        if (zawod == "konowal")
+        }
+        if (zawod.equals("konowal")) {
             this.pracowac = new Leczenie();
-            this.dojezdzac = new Samochow();
+            this.dojezdzac = new Samochod();
             this.wolnyCzas = new Literatura();
-        if (zawod == "listonosz")
+        }
+        if (zawod.equals("listonosz")) {
             this.pracowac = new RoznoszenieListow();
             this.dojezdzac = new Rower();
             this.wolnyCzas = new Silka();
+        }
         this.zawod = zawod;
     }
 
     public void execute () {
+        System.out.println(this.zawod);
         pracowac.pracuj();
         dojezdzac.dojezdzaj();
         wolnyCzas.spedzanieWolnegCzasu();
 
     }
 
-    public String getPracowac() {
-        return pracowac.toString();
-    }
-
-    public void setPracowac(Pracowac pracowac) {
-        this.pracowac = pracowac;
-    }
-
-    public String getDojezdzac() {
-        return dojezdzac.toString();
-    }
-
-    public void setDojezdzac(Dojezdzac dojezdzac) {
-        this.dojezdzac = dojezdzac;
-    }
-
-    public WolnyCzas getWolnyCzas() {
-        return wolnyCzas;
-    }
-
-    public void setWolnyCzas(WolnyCzas wolnyCzas) {
-        this.wolnyCzas = wolnyCzas;
-    }
-
-    public String getZawod() {
-        return zawod;
-    }
-
-    public void setZawod(String zawod) {
-        this.zawod = zawod;
-    }
-
     @Override
     public String toString() {
         return "Pracownik{" +
                 "pracowac = " + pracowac +
-                ", dojezdzac = " + dojezdzac +
-                ", wolnyCzas = " + wolnyCzas +
+                ", dojezdza = " + dojezdzac +
+                ", wolny czas spedza= " + wolnyCzas +
                 ", zawod = '" + zawod + '\'' +
                 '}';
     }
